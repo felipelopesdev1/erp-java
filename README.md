@@ -1,32 +1,41 @@
-ERP Java
+# ERP Java
 
 Projeto de ERP desenvolvido em Java com foco em aprendizado de Programação Orientada a Objetos, modelagem de sistemas e boas práticas de desenvolvimento.
 
-Objetivo
+## Objetivo
 
 O objetivo deste projeto é evoluir gradualmente um sistema ERP, aplicando conceitos utilizados no mercado de desenvolvimento de software, desde a modelagem das entidades até a construção de uma aplicação completa.
 
-Tecnologias Utilizadas
-Java
-Maven
-Git
-GitHub
-IntelliJ IDEA
-Funcionalidades Implementadas
-Usuários
-Cadastro de usuários
-Validação de nome
-Validação de e-mail
-Validação de senha
-Controle de status (ativo/inativo)
-Controle de cargos através de Enum
-Cargos Disponíveis
-ADMINISTRADOR
-GERENTE
-VENDEDOR
-FINANCEIRO
-ESTOQUISTA
-Estrutura Atual
+## Tecnologias Utilizadas
+
+* Java
+* Maven
+* Git
+* GitHub
+* IntelliJ IDEA
+
+## Funcionalidades Implementadas
+
+### Usuários
+
+* Cadastro de usuários
+* Validação de nome
+* Validação de e-mail
+* Validação de senha
+* Controle de status (ativo/inativo)
+* Controle de cargos através de Enum
+
+### Cargos Disponíveis
+
+* ADMINISTRADOR
+* GERENTE
+* VENDEDOR
+* FINANCEIRO
+* ESTOQUISTA
+
+## Estrutura Atual
+
+```text
 src
 └── main
     └── java
@@ -35,50 +44,42 @@ src
             └── model
                 ├── Usuario.java
                 └── Cargo.java
-Roadmap
-Modelagem
+```
 
-Classe Pessoa
+## Roadmap
 
-Herança entre Pessoa e Usuario
+### Modelagem
 
-Classe Cliente
+* [ ] Classe Pessoa
+* [ ] Herança entre Pessoa e Usuario
+* [ ] Classe Cliente
+* [ ] Classe Compra
+* [ ] Classe Produto
 
-Classe Compra
+### Regras de Negócio
 
-Classe Produto
+* [ ] Relacionamento Cliente x Compras
+* [ ] Controle de Estoque
+* [ ] Controle Financeiro
 
-Regras de Negócio
+### Persistência
 
-Relacionamento Cliente x Compras
+* [ ] Banco de Dados PostgreSQL
+* [ ] JDBC
+* [ ] JPA/Hibernate
 
-Controle de Estoque
+### Backend
 
-Controle Financeiro
+* [ ] Spring Boot
+* [ ] API REST
+* [ ] Autenticação e Autorização
 
-Persistência
+### Deploy
 
-Banco de Dados PostgreSQL
+* [ ] Hospedagem em nuvem
+* [ ] Ambiente de Produção
 
-JDBC
-
-JPA/Hibernate
-
-Backend
-
-Spring Boot
-
-API REST
-
-Autenticação e Autorização
-
-Deploy
-
-Hospedagem em nuvem
-
-Ambiente de produção
-
-Autor
+## Autor
 
 Felipe Lopes
 
