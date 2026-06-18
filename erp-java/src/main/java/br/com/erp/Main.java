@@ -1,27 +1,25 @@
 package br.com.erp;
 
 import br.com.erp.model.Cargo;
-
 import br.com.erp.model.Usuario;
+import br.com.erp.model.Cliente;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Usuario usuario = new Usuario(
-                "felipe",
-                "felipe@gmail.com",
-                "12345a",
-                Cargo.GERENTE,
-                true
+        Cliente cliente = new Cliente(
+                "João Silva",
+                "joao@gmail.com",
+                true,
+                "12345678901",
+                "11999999999",
+                "Rua A, 123"
         );
-   
-        System.out.println(usuario.getNome());
-        System.out.println(usuario.getEmail());
-        System.out.println(usuario.getCargo());
-        System.out.println(usuario.isAtivo());
 
+        System.out.println(cliente.getNome());
+        System.out.println(cliente.getCpf());
+        System.out.println(cliente.getTelefone());
+        System.out.println(cliente.getEndereco());
     }
-
-
 }

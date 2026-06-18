@@ -1,96 +1,55 @@
 package br.com.erp.model;
 
-public class Usuario {
+public class Usuario extends Pessoa {
 
+    // =====================
+    // ATTRIBUTES
+    // =====================
 
-    private String nome;
-    private String email;
     private String senha;
     private Cargo cargo;
-    private boolean ativo;
 
-    public Usuario(String nome, String email, String senha, Cargo cargo, boolean ativo){
-        setNome(nome);
-        setEmail(email);
+    public Usuario(String nome, String email, boolean ativo,
+                   String senha, Cargo cargo) {
+
+        super(nome, email, ativo);
+
         setSenha(senha);
         setCargo(cargo);
-        this.ativo = ativo;
     }
 
-    public String getNome(){
-        return nome;
-    }
+    // =====================
+    // GETTERS
+    // =====================
 
-    public String getEmail(){
-        return email;
-    }
-
-    public Cargo getCargo(){
+    public Cargo getCargo() {
         return cargo;
     }
 
-    public boolean isAtivo(){
-        return ativo;
+    public String getSenha() {
+        return senha;
     }
 
-    public void setNome(String nome){
+    // =====================
+    // SETTERS
+    // =====================
 
-        if(nome == null || nome.isBlank()){
-            throw new IllegalArgumentException(
-                    "O nome não pode ser vazio"
-            );
+    public void setCargo(Cargo cargo) {
+        if (cargo == null) {
+            throw new IllegalArgumentException("O cargo não pode ser nulo");
         }
-
-        this.nome = nome;
-    }
-
-    public void setEmail(String email){
-
-        if(email == null || email.isBlank()){
-            throw new IllegalArgumentException(
-                    "O e-mail não pode estar vazio"
-            );
-        }
-
-        if(!email.contains("@") || !email.contains(".")){
-            throw new IllegalArgumentException(
-                    "E-mail invalido"
-            );
-        }
-
-        this.email = email;
-    }
-
-    public void setCargo(Cargo cargo){
-
-        if(cargo == null ){
-            throw new IllegalArgumentException(
-                    "Não pode estar vazio"
-            );
-        }
-
         this.cargo = cargo;
     }
 
-    public void setSenha(String senha){
-
-        if(senha == null || senha.isBlank()) {
-            throw new IllegalArgumentException(
-                    "A senha não pode ter espacos"
-            );
+    public void setSenha(String senha) {
+        if (senha == null || senha.isBlank()) {
+            throw new IllegalArgumentException("A senha não pode estar vazia");
         }
 
-        if(senha.length()<6){
-            throw new IllegalArgumentException(
-                    "A senha deve conter pelo menos 6 caracteres"
-            );
+        if (senha.length() < 6) {
+            throw new IllegalArgumentException("A senha deve ter pelo menos 6 caracteres");
         }
 
-        this.senha=senha;
-
-    }
-
-    public void setAtivo(boolean ativo) {
-        this.ativo = ativo;
+        this.senha = senha;
     }
 }
